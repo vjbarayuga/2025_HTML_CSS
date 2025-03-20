@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .container {
+        margin: 20px;
+        height: 1500px; /* For scrolling demo */
+      }
+
+      /* Static (Default) */
+      .box {
+        width: 200px;
+        height: 100px;
+        margin: 10px;
+        padding: 10px;
+        background: #eee;
+        border: 2px solid black;
+      }
+
+      /* Relative - Moves from original position */
+      .relative {
+        position: relative;
+        top: 20px; /* Moves down 20px */
+        left: 20px; /* Moves right 20px */
+        background: #ffcccc;
+      }
+
+      /* Absolute - Positions relative to nearest positioned parent */
+      .absolute {
+        position: absolute;
+        /* top: 0px; /* From parent's top */
+        /* right: 0px; From parent's right  */
+        top: 20px; /* Moves down 20px */
+        left: 20px; /* Moves right 20px */
+        background: #cce6ff;
+      }
+
+      /* Fixed - Stays fixed on viewport */
+      .fixed {
+        position: fixed;
+        bottom: 20px; /* From viewport bottom */
+        right: 20px; /* From viewport right */
+        background: #ccffcc;
+      }
+
+      /* Sticky - Sticks when scrolling reaches its position */
+      .sticky {
+        position: sticky;
+        top: 0; /* Sticks at top */
+        background: #ffecb3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box relative">Relative: Moves from original position</div>
+      <div class="box absolute">Absolute: Positions to parent</div>
+      <div class="box fixed">Fixed: Stays on screen</div>
+      <div class="box sticky">Sticky: Sticks while scrolling</div>
+    </div>
+  </body>
+</html>

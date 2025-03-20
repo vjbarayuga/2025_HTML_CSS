@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Positioning</title>
+    <style>
+                                        body {
+                                          font-family: Arial, sans-serif;
+                                          margin: 0;
+                                          padding: 0;
+                                        }
+
+                                        .container {
+                                          margin: 20px;+
+                                          display: flex;
+                                          flex-direction: column;
+                                          gap: 20px;
+                                        }
+
+                                        /* Example 1: Relative Positioning */
+                                  .relative-box {
+                                    padding: 20px;
+                                    height: 300px;
+                                    width: 400px;
+                                    background-color: #0071ff;
+                                    color: white;
+                                    position: relative;
+                                    top: 30px;
+                                    left: 30px
+
+                                  }
+                                        /* Example 2: Fixed Positioning */
+                            .fixed-box{
+                              padding: 20px;
+                              height: 300px;
+                              width: 400px;
+                              background-color: #00c1ff;
+                              color: white;
+                              position: fixed;
+                              top: 50%;
+                              left: 50%;
+                              transform: translate(-50%, -50%);
+                            }
+                                        /* Example 3: Sticky Positioning */
+                      .sticky-container {
+                        height: 2000px;
+                        background: linear-gradient(180deg, #f4f4f4, #cccccc);
+                        padding-top: 100px;
+                      }
+
+                      .sticky-box {
+                        padding: 20px;
+                  height: 300px;
+                  width: 400px;
+                  background-color: #ff7100;
+                  color: white;
+                  position: sticky;
+                  top: 10px;
+                      }
+
+                      /* Example 4: Absolute Positioning */
+                    .parent {
+              position: relative;
+              padding: 30px;
+              width: 500px;
+              height: 300px;
+              background-color: #0bc11a;
+              color: white;
+            }
+
+            .child {
+        padding: 20px;
+        background-color: #0071ff;
+        color: white;
+        position: absolute;
+        top: 80%;
+        left: 80%;
+        transform: translate(-50%, -50%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="relative-box">
+        This box is positioned <strong>relative</strong>.
+      </div>
+      <div class="fixed-box">
+        This box is positioned <strong>fixed</strong>.
+      </div>
+      <div class="sticky-container">
+        <div class="sticky-box">
+          This box is positioned <strong>sticky</strong>.
+        </div>
+      </div>
+      <div class="parent">
+        Parent Element
+        <div class="child">
+          This box is positioned <strong>absolute</strong>.
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
